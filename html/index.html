@@ -1,0 +1,77 @@
+<html ng-app="BestBuild">
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.1/angular.min.js"></script>
+		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
+		<script src="static/js/app.js"></script>
+		
+		<link rel="stylesheet" type="text/css" href="static/css/main.css">
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+
+		<script type="text/javascript">
+			function changeGold(key) {
+				console.log("hi");
+			}
+		</script>
+  	</head>
+
+	<body ng-controller="AppController">
+	
+	<div id="loading"><img src="static/img/ajax-loader.gif" /></div>
+	<!-- Output data area -->
+	<div id="outputData">
+		<div id="statsHeader">
+			<div id="headerChampion">
+				<img id="headerChampImage" src="http://ddragon.leagueoflegends.com/cdn/4.20.1/img/champion/Aatrox.png">
+				<input type="text" id="headerChampName" style="width: 400px" ng-click="clearChamp()" value="Aatrox" />
+			</div>
+			<div id="headerGold">
+				<div id="headerGoldDecrease" ng-click="goldDecr()"> - </div>
+				<div id="headerGoldCount"> {{ gold }} gold</div>
+				<div id="headerGoldIncrease" ng-click="goldIncr()"> + </div>
+			</div>
+			<div id="headerVersion">
+				Game version 4.20.1
+			</div>
+		</div>
+		<!-- Auto-attacks -->
+		<div class="statSet">
+			<div class="mainStat" id="autoattack">
+				<p class="statLabel">Auto-attack (dps)</p>
+				<p class="statValue">{{ aa.total() }}</p>
+			</div>
+			<div class="statTransition"> = </div>
+			<div class="mainStat" id="skillburst">
+				<p class="statLabel">Base damage</p>
+				<p class="statValue">{{ aa.baseAttackDamage() }} {{ aa.attackDamageDelta() }}</p>
+			</div>
+			<div class="statTransition"> &#215; </div>
+			<div class="mainStat" id="skillburst">
+				<p class="statLabel">Attack speed</p>
+				<p class="statValue">{{ aa.baseAttackSpeed() }} {{ aa.attackSpeedDelta() }}</p>
+			</div>
+			<div class="statTransition"> + </div>
+			<div class="mainStat" id="skillburst">
+				<p class="statLabel">Critical strike chance</p>
+				<p class="statValue">{{ aa.baseCritStrike() }}% {{ aa.critStrikeDelta() }}</p>
+			</div>
+		</div>
+		
+		<h2>Optimal Items</h2>
+		<div id="keeperItems"></div>
+		
+		<h2>Available Items</h2>
+		<div id="outputItems">
+		Loading item data...
+		</div>	
+		<!-- Skill burst
+		<div class="statSet">
+			<div class="mainStat" id="skillburst">
+				<p class="statLabel">Max skill burst</p>
+				<p class="statValue">not yet supported</p>
+			</div>
+		</div>
+		-->
+	</div>
+	</body>
+</html>

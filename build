@@ -1,0 +1,5 @@
+GOPATH=`pwd`
+
+protoc --plugin=../cleo/bin/protoc-gen-go --go_out=src/proto services.proto
+go build frontend
+sass html/static/css/main.scss html/static/css/main.css

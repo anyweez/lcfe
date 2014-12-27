@@ -1,0 +1,29 @@
+package service;
+
+message BestBuildRequest {
+	optional int32 			gold			= 1;
+
+	// Champion ID (Riot-provided).
+	optional int32 			champion_id		= 2;
+	optional int32			enemy_id		= 3;
+	optional FitnessType	fitness 		= 4;
+	
+	enum FitnessType {
+		DPS = 1;
+	}
+}
+
+message BestBuildResponse {
+	optional float fitness			= 1;
+	// Encoded representation of the item.
+	repeated string json_item		= 2;
+}
+
+
+/**
+ * A BestBuildService retrieves a build configuration that's optimal for
+ * a given champion against another champion.
+ */
+service BestBuildService {
+	rpc GetBestBuild(BestBuildRequest) returns (BestBuildResponse);
+}

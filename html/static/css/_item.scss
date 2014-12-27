@@ -1,0 +1,36 @@
+.item {
+	display: inline-block;
+	width: 13%;
+	border: 1px solid black;
+	@include box-shadow-mx(3px, 3px, 6px, 0px, rgb(80, 80, 80));
+	
+	margin: .5%;
+	padding: .5%;
+	
+	text-align: left;
+	
+	overflow: hidden;
+	opacity: .2;
+	
+	cursor: pointer;
+
+	img {
+		border: 1px solid black;
+		margin-right: 2%;
+
+		float: left;
+	}
+	
+	.itemInfo {
+		vertical-align: top;	
+
+		p {
+			margin: 4px;
+		}
+	}
+}
+
+.active {
+	opacity: 1.0;
+}
+

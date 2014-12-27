@@ -1,0 +1,86 @@
+
+@mixin box-shadow-mx($h, $v, $blur, $spread, $color) {
+	-webkit-box-shadow: $h $v $blur $spread $color;
+	-moz-box-shadow: $h $v $blur $spread $color;
+	box-shadow: $h $v $blur $spread $color;
+}
+
+/**
+ * Link in a bunch of different mixins.
+ *   - header = styles for the area at the top of the page, not 
+ *       including autocomplete
+ *   - autocomplete =  styles for the autocomplete widget only.
+ */
+@import 'header';
+@import 'autocomplete';
+@import 'item';
+
+body {
+	padding: 0;
+	margin: 0;
+}
+
+#outputData {
+	width: 100%;
+	margin: 0;	
+}
+
+#outputItems {
+	text-align: center;
+}
+
+
+.mainStat {
+	display: inline-block;
+}
+
+.mainStat .statLabel {
+	font-weight: bold;
+	margin: 1em 0 .5em 0;
+}
+
+.mainStat .statValue {
+	font-size: 3em;
+	margin: .5em 0 .5em 0;
+}
+
+.statTransition {
+	display: inline-block;
+	font-size: 3em;
+	
+	margin: 0 1em 0 1em;
+}
+
+.statSet {
+	text-align: center;
+}
+
+#loading {
+	background-color: white;
+	border: 1px solid #333;
+	border-width: 1px 0 1px 0;
+
+	width: 120%;			
+	position: fixed;
+	top: 45%;	
+	left: -10%;
+	z-index: 100;
+	visibility: hidden;
+	
+	text-align: center;
+	
+	img {
+		width: 75px;
+		height: 75px;
+		
+		margin: 30px;
+	}
+}
+
+.blurWhenLoading {
+    -webkit-filter: blur(2px) grayscale(.9);
+    -moz-filter: blur(2px) grayscale(.9);
+    -o-filter: blur(2px) grayscale(.9);
+    -ms-filter: blur(2px) grayscale(.9);
+    filter: blur(2px) grayscale(.9);
+}

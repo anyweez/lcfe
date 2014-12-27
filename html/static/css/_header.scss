@@ -1,0 +1,60 @@
+#statsHeader {
+	border-bottom: 2px solid #aaa;
+	padding: .5%;
+	margin-bottom: 1%;
+	
+	background-color: #333;
+	color: #eee;
+}
+
+#statsHeader #headerChampion {
+	width: 30%;
+	display: inline-block;
+	height: 60px;
+}
+
+#statsHeader #headerChampImage {
+	width: 60px;
+	height: 60px;
+	
+	display: inline-block;
+}
+
+#statsHeader #headerChampName {
+	display: inline-block;
+	height: 60px;
+	margin-left: .5%;
+	
+	vertical-align: top;
+	font-size: 1.5em;
+
+	background-color: #333;
+	color: #eee;
+}
+
+#statsHeader #headerGold {
+	display: inline-block;
+	width: 30%;
+	height: 60px;
+	vertical-align: top;
+	
+	font-size: 1.5em;
+	cursor: pointer;
+	text-align: center;
+}
+
+#headerGold div {
+	display: inline-block;
+	margin: 5px;
+	vertical-align: middle;
+}
+
+#headerVersion {
+	float: right;
+	display: inline-block;
+}
+
+#headerChampName {
+	cursor: pointer;
+	border-width: 0px;
+}

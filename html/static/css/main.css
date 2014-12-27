@@ -1,0 +1,150 @@
+/**
+ * Link in a bunch of different mixins.
+ *   - header = styles for the area at the top of the page, not 
+ *       including autocomplete
+ *   - autocomplete =  styles for the autocomplete widget only.
+ */
+#statsHeader {
+  border-bottom: 2px solid #aaa;
+  padding: .5%;
+  margin-bottom: 1%;
+  background-color: #333;
+  color: #eee; }
+
+#statsHeader #headerChampion {
+  width: 30%;
+  display: inline-block;
+  height: 60px; }
+
+#statsHeader #headerChampImage {
+  width: 60px;
+  height: 60px;
+  display: inline-block; }
+
+#statsHeader #headerChampName {
+  display: inline-block;
+  height: 60px;
+  margin-left: .5%;
+  vertical-align: top;
+  font-size: 1.5em;
+  background-color: #333;
+  color: #eee; }
+
+#statsHeader #headerGold {
+  display: inline-block;
+  width: 30%;
+  height: 60px;
+  vertical-align: top;
+  font-size: 1.5em;
+  cursor: pointer;
+  text-align: center; }
+
+#headerGold div {
+  display: inline-block;
+  margin: 5px;
+  vertical-align: middle; }
+
+#headerVersion {
+  float: right;
+  display: inline-block; }
+
+#headerChampName {
+  cursor: pointer;
+  border-width: 0px; }
+
+/**
+ * Autocomplete images.
+ */
+.ac-img {
+  width: 60px;
+  height: 60px;
+  margin-right: 6px; }
+
+/**
+ * Autocomplete text.
+ */
+.ac-txt {
+  vertical-align: top; }
+
+.menu-item {
+  padding: 3px 0 3px 0; }
+
+.item {
+  display: inline-block;
+  width: 13%;
+  border: 1px solid black;
+  -webkit-box-shadow: 3px 3px 6px 0px #505050;
+  -moz-box-shadow: 3px 3px 6px 0px #505050;
+  box-shadow: 3px 3px 6px 0px #505050;
+  margin: .5%;
+  padding: .5%;
+  text-align: left;
+  overflow: hidden;
+  opacity: .2;
+  cursor: pointer; }
+  .item img {
+    border: 1px solid black;
+    margin-right: 2%;
+    float: left; }
+  .item .itemInfo {
+    vertical-align: top; }
+    .item .itemInfo p {
+      margin: 4px; }
+
+.active {
+  opacity: 1.0; }
+
+body {
+  padding: 0;
+  margin: 0; }
+
+#outputData {
+  width: 100%;
+  margin: 0; }
+
+#outputItems {
+  text-align: center; }
+
+.mainStat {
+  display: inline-block; }
+
+.mainStat .statLabel {
+  font-weight: bold;
+  margin: 1em 0 .5em 0; }
+
+.mainStat .statValue {
+  font-size: 3em;
+  margin: .5em 0 .5em 0; }
+
+.statTransition {
+  display: inline-block;
+  font-size: 3em;
+  margin: 0 1em 0 1em; }
+
+.statSet {
+  text-align: center; }
+
+#loading {
+  background-color: white;
+  border: 1px solid #333;
+  border-width: 1px 0 1px 0;
+  width: 120%;
+  position: fixed;
+  top: 45%;
+  left: -10%;
+  z-index: 100;
+  visibility: hidden;
+  text-align: center; }
+  #loading img {
+    width: 75px;
+    height: 75px;
+    margin: 30px; }
+
+.blurWhenLoading {
+  -webkit-filter: blur(2px) grayscale(0.9);
+  -moz-filter: blur(2px) grayscale(0.9);
+  -o-filter: blur(2px) grayscale(0.9);
+  -ms-filter: blur(2px) grayscale(0.9);
+  filter: blur(2px) grayscale(0.9); }
+
+/*# sourceMappingURL=main.css.map */
